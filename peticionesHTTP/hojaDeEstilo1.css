@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Peaceful Heart";
+  src: url(Peaceful\ Heart.ttf);
+}
+
+/* css pagina index */
+#botonesIndex {
+  text-align: center;
+}
+
+button #botonesIndex {
+  width: 180px;
+  height: 30px;
+  font-size: 20px;
+}
+
+img {
+  width: 20%;
+  border-radius: 100%;
+}
+
+#image {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* css para página de usuarios */
+form,
+ul {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  font-family: "Peaceful Heart";
+  font-size: 70px;
+}
+
+p {
+  margin-left: 20px;
+}
+
+input,
+select,
+label,
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+#contenido,
+form {
+  margin: 20px;
+  background-color: #ecd0e3;
+}
+
+#header {
+  text-align: center;
+  border-style: dashed;
+  background-color: #e7d0ec;
+  margin: 20px;
+}
+
+.error {
+  box-shadow: 0.5px 0.5px 0.5px 4px #7e2d87;
+}
+
+/* css para página listado de posts  */
+table,
+td,
+tr {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-spacing: 20px;
+}
+
+td,
+tr {
+  width: 200px;
+}
+
+thead {
+  font-family: "Peaceful Heart";
+  font-size: 30px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+hr {
+  width: 420%;
+  color: #d9d0ec;
+}
+#barra {
+  width: 90%;
+  color: #d9d0ec;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* css visualizador */
+#partesPost li,
+p {
+  margin-top: 10px;
+  padding-top: 20px;
+  margin-right: 10px;
+}
+
+textarea {
+  width: 60%;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.borrar,
+.ver {
+  background-color: black;
+  font-weight: bold;
+  padding: 3px;
+  background-color: #cc9999;
+}

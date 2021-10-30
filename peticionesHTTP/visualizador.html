@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="hojaDeEstilo1.css">
+    </head>
+    <body>
+        <div id="header">
+            <h2 id="titulo"></h2>
+        </div>
+
+        <div id = "contenido">
+
+            <ul id="partesPost">
+
+                <li> Creado por: </li>
+                <p id="autor"></p>
+
+                <li> Contenido: </li>
+                <p id="descrip">  </p>
+
+                <li > Comentarios: </li>
+                <div id="comentario"></div>
+
+                <label name="coment">Escriba su comentario aquí:</label><br>
+                <textarea name="coment" type="textarea" id="inputComentario"></textarea><br>
+
+                <label name="usuario">Selecione usuario</label>
+                <select name="usuario" id="opcionesUser">
+                    <option>--</option>
+                    
+                </select>
+
+                <br>
+                <input type="button" value="PUBLICAR" id="publiComent">
+
+
+            </ul>
+
+
+        </div>
+        
+        <div>
+            <button ><a href="index.html">INICIO</a></button>
+            <button ><a href="listadoPost.html">VOLVER</a></button>
+        </div>
+        
+        
+        <script src="visualizador.js" async defer></script>
+    </body>
+</html>

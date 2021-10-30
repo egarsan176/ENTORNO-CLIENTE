@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "title": "Planes en Zafra",
+      "author": "Estefanía García",
+      "text": "La ciudad de Zafra, situada en la provincia de Badajoz es un destino muy interesante para un viaje corto ya que en ella se aúnan monumentos, historia y buena gastronomía. Por si estáis pensando acercaros en Semana Santa o en los puentes de Mayo para conocer Zafra, os contamos qué ver y qué hacer en una escapada a este municipio extremeño. Su historia comienza con la cercanas villa romana de Segeda pero Zafra consigue su esplendor en la época medieval, cuando era la frontera entre los reinos de Sevilla y de Badajoz, cuando los árabes la bautizaron como Safra o Çafra, de donde deriva su nombre actual."
+    },
+    {
+      "id": 1,
+      "title": "De tapas por Sevilla",
+      "author": "Estefanía García",
+      "text": "Siempre se habla de las películas que debes ver antes de morir, las mejores canciones de todos los siglos o los clásicos libros que tienes que leer sí o sí. Pero aparte de eso, tampoco es plan de irte al otro barrio sin haber probado las exquisiteces que tiene que ofrecerte Sevilla. Todos los que vienen adoran nuestra gastronomía, el arte del tapeo y el cariño que se le pone a la cocina en esta ciudad, así que toma nota y apunta este podium de tapas imprescindibles."
+    },
+    {
+      "id": 3,
+      "title": "Paseando por Itálica",
+      "author": "Antonio Andrades",
+      "text": "La ciudad de Itálica es visita obligada a poca distancia de Sevilla (7 km) y sin lugar a dudas sorprenderá a los visitantes tanto por la calidad de lo conservado así como por la magnitud de la ciudad. La ciudad fue fundada en 206 a.c. por Publio Cornelio Escipión, el Africano, como lugar donde recuperar a las tropas heridas así como un lugar de residencia para sus veteranos de guerra. Fue lugar de origen de los emperadores Trajano y Adriano. Con el emperador Augusto, la ciudad se desarrolló llegando a diferenciar lo que se llamó la nova urbs. Una nueva ciudad que llegó a tener alcantarillado, servicios...o sea una ciudad de las más avanzadas del mundo romano en su momento. Se mantuvo en uso hasta el periodo musulmán cuando pasó a ser una cantera de materiales, siendo entonces conocida como Sevilla la vieja."
+    }
+  ],
+  "users": [
+    {
+      "userName": "estefgar",
+      "fullName": "estefania",
+      "email": "estefaniagarci@gmail.com",
+      "id": 1
+    },
+    {
+      "userName": "pegom1",
+      "fullName": "pepito",
+      "email": "bargiralda@gmail.com",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "text": "holaaaa",
+      "user": "estefgar",
+      "id": 1,
+      "idPost": 1
+    },
+    {
+      "text": "Qué buen post",
+      "user": "estefgar",
+      "id": 2,
+      "idPost": 1
+    },
+    {
+      "text": "Zafra, qué ciudad más bonita. Vuelvo siempre que puedo.",
+      "user": "pegom1",
+      "idPost": "2",
+      "id": 3
+    }
+  ]
+}
