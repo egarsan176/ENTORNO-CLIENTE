@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  background-color: #ffff99;
+  font-family: sans-serif;
+  color: black;
+  user-select: none;
+  text-align: center;
+}
+
+.container {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  border: 2px dotted black;
+  background-color: #1abc9c;
+  border-radius: 10px;
+}
+
+.tasks {
+  width: 30%;
+  text-align: center;
+  background: #a3e4d7;
+  border: 1px dashed black;
+  min-height: 130px;
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.tasks:first-child {
+  margin-right: 1rem;
+}
+
+.task {
+  background-color: #58d68d;
+  padding: 1rem;
+  border-bottom: 1px dashed #000;
+  border-top: 1px dashed #000;
+  border-right: 1px dashed #000;
+  border-left: 1px dashed #000;
+  cursor: move;
+  border-radius: 10px;
+}
+
+.task:first-child {
+  border-top: 1px dashed #000;
+  border-right: 1px dashed #000;
+  border-left: 1px dashed #000;
+}
+
+.task:last-child {
+  border-top: 1px dashed #000;
+  border-right: 1px dashed #000;
+  border-left: 1px dashed #000;
+}
+
+.active {
+  background-color: #fff;
+  color: #000;
+}
+
+#pending {
+  background-color: #ffff33;
+}
+#doing {
+  background-color: #ff6666;
+}
+
+#finished {
+  background-color: #9933ff;
+}
+
+.lista {
+  margin: 40px 0px;
+}
+.lista-input {
+  width: 250px;
+  border: dashed 1px;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.add-button {
+  background-color: #58d68d;
+  color: black;
+  border: dashed 1px;
+  outline: none;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
