@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>API Drag & Drop</title>
+    <link rel="stylesheet" href="styleDragDrop3.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="pending-tasks" class="tasks">
+        <h2 class="title" id="pending">Pending Tasks</h2>
+        <!-- <div id="task-1" class="task" draggable="true">Task 1</div>
+        <div id="task-2" class="task" draggable="true">Task 2</div>
+        <div id="task-3" class="task" draggable="true">Task 3</div>
+        <div id="task-4" class="task" draggable="true">Task 4</div>
+        <div id="task-5" class="task" draggable="true">Task 5</div> -->
+      </div>
+      
+      <div id="doing-tasks" class="tasks">
+        <h2 class="title" id="doing">Doing Tasks</h2>
+      </div>
+      <div id="finished-tasks" class="tasks">
+        <h2 class="title" id="finished">Finished Tasks</h2>
+      </div>
+    </div>
+
+    <form class="lista">
+      <input type="text" class="lista-input" placeholder="Add new task...">
+      <button type="submit" class="add-button">ADD</button>
+    </form>
+
+    <div id= "papelera">
+      <p>Tareas finalizadas aquí</p>
+      <p>↓</p>
+      <img class="papelera" src="papelera.png" width="15%">
+    </div>
+    <script src="scripyDragDrop3.js"></script>
+  </body>
+
+</html>
+
+
+<!-- 
+
+dragstart
+    Se ejecuta sobre un elemento cuando se inicia una operación de arrastre.
+    El usuario está solicitando arrastrar el elemento al que dispara el evento dragstart.
+    Durante este evento, un proceso de escucha ajustará cierto tipo de información como
+    los datos de la operación de arrastre y la imagen que se asocia con ella.
+
+
+dragenter
+    Se dispara cuando el ratón/mouse se mueve primero sobre un elemento, mientras está
+    teniendo lugar una operación de arrastre. Un proceso de escucha de este evento debe
+    indicar si se permite una operación de arrastre sobre esta ubicación. Si no hay procesos
+    de escucha o éstos no realizan ninguna operación, entonces no se permite, de manera
+    predeterminada, una operación de arrastre. Este es también el evento al que escuchar
+    si deseas proporcionar información acerca de que se permite una operación de arrastre,
+    como, por ejemplo, mostrar un resaltado o un marcador de inserción.
+
+
+dragover
+    Este evento se activa cuando el ratón/mouse se mueve sobre un elemento cuando está
+    teniendo lugar una operación de arrastre. Gran parte del tiempo, la operación que tiene
+    lugar durante un proceso de escucha será la misma que el evento dragenter. 
+
+
+dragleave
+    Este evento se activa cuando el ratón/mouse sale de un elemento mientras que está
+    teniendo lugar una operación de arrastre. Los procesos de escucha deben eliminar cualquier
+    resaltado o marcador de inserción que usan para la información sobre el proceso de arrastre.
+
+drag
+    Este evento se activa en el origen del arrastre, es decir, el elemento donde dragstart fue
+    disparado, durante la operación de arrastre.
+
+drop
+    El evento se dispara sobre el elemento en el que se produjo la colocación al finalizar la
+    operación de arrastre. Un proceso de escucha se encargará de recuperar los datos que se
+    arrastran e insertarlos en la ubicación de la colocación. Este evento sólo se activará si
+    se desea disponer de la funcionalidad de soltar. No se activará si el usuario cancela la
+    operación de arrastre, por ejemplo, pulsando la tecla Escape, o si se liberó el botón del
+    ratón/mouse mientras que éste no estaba sobre un destino de colocación válido.
+
+dragend
+    El origen del arrastre recibirá un evento dragend cuando la operación se haya completado,
+    tanto si tuvo éxito como si no. 
+  
+  
+  -->

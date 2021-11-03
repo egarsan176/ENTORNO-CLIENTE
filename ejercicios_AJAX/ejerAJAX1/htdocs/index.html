@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Ejercicio 3 - Comprobar disponibilidad del login</title>
+
+    
+</head>
+
+<body>
+    <h1>Comprobar disponibilidad del login</h1>
+    <form>
+        <label for="login">Nombre de usuario:</label>
+        <input type="text" name="login" id="login" />
+        <a id="comprobar" href="#">Comprobar disponibilidad...</a>
+    </form>
+
+    <div id="disponibilidad"></div>
+    <script type="text/javascript" src="ejer1.js"></script>
+</body>
+</html>
+
+
+<!-- Un ejemplo de validación compleja es la que consiste en comprobar si un nombre de usuario
+escogido está libre o ya lo utiliza otro usuario. Como es una validación que requiere el uso de una
+base de datos muy grande, no se puede realizar en el navegador del cliente. Utilizando las técnicas
+mostradas anteriormente y la página web que se proporciona:
+• Crear un script que compruebe con AJAX y la ayuda del servidor si el nombre escogido por
+el usuario está libre o no. (Ojo la respuesta es texto, por lo que habría que recuperarla con
+response.text())
+• El script del servidor se llama compruebaDisponibilidad.php y el parámetro que contiene el
+nombre se llama login.
+• La respuesta del servidor es "si" o "no", en función de si el nombre de usuario está libre y se
+puede utilizar o ya ha sido ocupado por otro usuario.
+• A partir de la respuesta del servidor, mostrar un mensaje al usuario indicando el resultado de
+la comprobación. 
+
+
+haces una peticion al php, y el servdor te va  a dar una respuesta si o no, 
+quiere que le muestres el mensaje de la comprobacion
+-->
