@@ -9,13 +9,14 @@ boton.addEventListener("click", (e) =>{
     formData.append('login', valorLogin);
 
     //hago la peticion a la página php
-    fetch('http://ejerajax2.loc/compruebaDisponibilidadXML.php',  
+    fetch('http://ejerajax3.loc/compruebaDisponibilidadJSON.php',  
     {method: 'POST',
-    body: formData
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(formData)
     })   
     .then(response => {
         if(response.ok){    //si la promesa se resuelve
-            return response.text(); //la transformo en texto
+            return response.json(); //la transformo en json
         }
         return Promise.reject(response);    //si no se resuelve
     })
@@ -23,27 +24,24 @@ boton.addEventListener("click", (e) =>{
     .then(datos => {    //datos es la respuesta del php 
         console.log(datos)
 
-        const parser = new DOMParser(); //creo el objeto parseador
-        const xml = parser.parseFromString(datos, "application/xml");
-
-        mostrarRespuesta(xml);
+        mostrarRespuesta(datos);
 
     })
 
     .catch(err => {
-        console.log('Error en la petición HTTP: '+err.message);
+        console.log('Error en la peticion HTTP: '+err.message);
     }) 
 
 })
 
 
-function mostrarRespuesta(xml){
+function mostrarRespuesta(datos){
 
     let usuario = document.getElementById("login").value;   //el valor del input en elq ue se pone el nombre
     let parrafo = document.createElement("p");
     let parrafo2 = document.createElement("p");
 
-    let respuesta = xml.getElementsByTagName("respuesta")[0]
+    let respuesta = datos.getElementsByTagName("respuesta")[0]
     let disponible = respuesta.getElementsByTagName("disponible")[0].firstChild.nodeValue;
     //console.log(disponible[0].textContent); //para ver la respuesta
 
@@ -66,10 +64,10 @@ function mostrarRespuesta(xml){
 
 }
 
-function mostrarOpciones(xml){
+function mostrarOpciones(respuesta){
  //console.log("Entra en la funcion")
 
- let alternativas = xml.getElementsByTagName("alternativas")[0];    //alternativas contiene las opciones de login
+ let alternativas = respuesta.getElementsByTagName("alternativas")[0];    //alternativas contiene las opciones de login
  let ejemploslogin = alternativas.getElementsByTagName("login")
  let ul = document.createElement("ul")
  ul.setAttribute("id", "listaOpciones") //le pongo un id para poder luego acceder a ella 
@@ -101,3 +99,6 @@ disponibilidad.addEventListener("click", (e) =>{
         
     }
 })
+
+    
+//NO FUNCIONA --> Error en la peticion HTTP: JSON.parse: expected property name or '}' at line 2 column 3 of the JSON data
