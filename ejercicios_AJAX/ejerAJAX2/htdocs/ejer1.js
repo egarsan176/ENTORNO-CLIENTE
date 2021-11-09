@@ -1,10 +1,18 @@
 const disponibilidad = document.querySelector("#disponibilidad");
 const boton = document.querySelector('#comprobar');
+let valorLogin = document.getElementById("login").value; 
 
 boton.addEventListener("click", (e) =>{
     e.preventDefault();
+       
+    let formData = new FormData();     //también puedo enviar el contenido del form entero especificando el id del formulario
+    formData.append('login', valorLogin);
 
-    fetch('http://ejerajax2.loc/compruebaDisponibilidadXML.php')   //hago la peticion a la página php
+    //hago la peticion a la página php
+    fetch('http://ejerajax2.loc/compruebaDisponibilidadXML.php',  
+    {method: 'POST',
+    body: formData
+    })   
     .then(response => {
         if(response.ok){    //si la promesa se resuelve
             return response.text(); //la transformo en texto
@@ -13,6 +21,7 @@ boton.addEventListener("click", (e) =>{
     })
 
     .then(datos => {    //datos es la respuesta del php 
+        //console.log(datos)
 
         const parser = new DOMParser(); //creo el objeto parseador
         const xml = parser.parseFromString(datos, "application/xml");
@@ -63,13 +72,17 @@ function mostrarOpciones(xml){
  let alternativas = xml.getElementsByTagName("alternativas")[0];    //alternativas contiene las opciones de login
  let ejemploslogin = alternativas.getElementsByTagName("login")
  let ul = document.createElement("ul")
- ul.setAttribute("id", "listaOpciones")
+ ul.setAttribute("id", "listaOpciones") //le pongo un id para poder luego acceder a ella 
 
- for (let i=1; i < ejemploslogin.length; i++){ //pongo i = 1 porque la i=0 está vacía
+ for (let i=0; i < ejemploslogin.length; i++){ 
 
     let li = document.createElement("li");
+    let enlace = document.createElement("a");
+    enlace.setAttribute("href", "#")
 
-    li.textContent = ejemploslogin[i].textContent
+    enlace.textContent = ejemploslogin[i].textContent
+
+    li.appendChild(enlace)
     ul.appendChild(li);
  }
 
@@ -77,11 +90,14 @@ function mostrarOpciones(xml){
 }
 
 
-listaOpciones = document.getElementById("listaOpciones");
 //con un evento capturo la  opcion que se muestra de los ul y la selecciono para ponerlo en el input
-listaOpciones.addEventListener("click", (e) =>{
+disponibilidad.addEventListener("click", (e) =>{
 
-    if(e.target.matches('li')){
+    if(e.target.matches('a')){
+        let nuevoNombre = e.target.textContent
+        let inputUsuario = document.getElementById("login");
+
+        inputUsuario.value = nuevoNombre
         
     }
 })
