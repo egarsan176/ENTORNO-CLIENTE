@@ -1,0 +1,15 @@
+* {
+  margin: 2%;
+}
+.contenido {
+  background-color: #dafc95;
+  padding: 2%;
+}
+button {
+  padding: 1%;
+  font-weight: bold;
+  font-size: medium;
+  border-style: ridge;
+  border-color: black;
+  background-color: yellowgreen;
+}

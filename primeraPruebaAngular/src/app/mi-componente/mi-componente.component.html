@@ -1,0 +1,39 @@
+<div>
+    
+    <hr>
+    
+    <p [hidden]="!visibleSaludo">Bienvenido a mi-componente</p>
+
+    <button (click)="saludar()">SALUDAR</button>
+
+    <button (click)="mostrarTabla()">MOSTRAR TABLA</button>
+
+    <div id="tabla" [hidden]="!visibleTabla">
+        <table>
+            <thead>
+                <th>Cabecera</th>
+                <th>Cabecera</th>
+                <th>Cabecera</th>
+                <th>Cabecera</th>
+            </thead>
+
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div>
+

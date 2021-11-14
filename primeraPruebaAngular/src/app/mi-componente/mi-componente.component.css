@@ -1,0 +1,35 @@
+hr {
+  color: blue;
+  margin-bottom: 3%;
+}
+
+div {
+  background-color: rgb(162, 211, 211);
+  text-align: center;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+#tabla {
+  text-align: center;
+}
+
+table {
+  border-style: solid;
+  border-collapse: collapse;
+}
+th,
+tr,
+td {
+  border: 1px;
+  border-style: solid;
+}
+th {
+  text-align: center;
+}
+
+button {
+  padding: 1%;
+  margin: 2%;
+  font-weight: bold;
+}
