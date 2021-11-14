@@ -1,0 +1,20 @@
+<div class="contenido">
+    
+    <h2 [style.background]= "edad >= 18 ? 'green' : 'red'"
+        [style.color]="'white'"> <!--se pueden añadirle estilos en función de la condición -->
+        - Indica tu edad: {{edad}}</h2>
+    
+    <button (click)="aumentarEdad()">Aumentar</button>
+    <button (click)="disminuirEdad()">Disminuir</button>
+        
+    <div *ngIf="edad >= 18"> <!--como un if de java -->
+        <ul>
+            <li>Eres mayor de edad</li>
+        </ul>
+    </div>
+    <div *ngIf="edad < 18">
+     <ul>
+         <li>Eres menor de edad</li>
+     </ul>
+    </div>
+</div>
