@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listas Desplegables</h1>
+
+    <form>
+        <label for="provincia">Provincia: </label>
+        <select id="provincias">
+          <option>- selecciona una provincia -</option>
+        </select>
+        <br>
+        <br>
+        <label for="municipio">Municipio: </label>
+        <select id="municipios">
+          <option>- selecciona un municipio -</option>
+        </select>
+      </form>
+    
+    <script src="script5.js"></script>
+</body>
+</html>
+
+<!-- Modificar el ejercicio anterior para soportar las respuestas del servidor en formato JSON. Los
+cambios introducidos son los siguientes:
+1) El script del servidor utilizado para cargar las provincias se llama cargaProvinciasJSON.php y la
+respuesta del servidor tiene el siguiente formato:
+{ "01": "Álava/Araba", "02": "Albacete",
+"Alicante/Alacant", ... }
+"03":
+2) El script del servidor utilizado para cargar los municipios se llama cargaMunicipiosJSON.php y
+la respuesta del servidor tiene el siguiente formato:
+{ "0014": "Alegría-Dulantzi",
+"0029": "Amurrio",
+...
+} -->

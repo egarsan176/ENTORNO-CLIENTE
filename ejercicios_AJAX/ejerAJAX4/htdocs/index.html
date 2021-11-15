@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listas Desplegables</h1>
+
+    <form>
+        <label for="provincia">Provincia: </label>
+        <select id="provincias">
+          <option>- selecciona una provincia -</option>
+        </select>
+        <br>
+        <br>
+        <label for="municipio">Municipio: </label>
+        <select id="municipios">
+          <option>- selecciona un municipio -</option>
+        </select>
+      </form>
+    
+    <script src="scriptJS.js"></script>
+</body>
+</html>
+
+
+<!-- Crear un script que cargue de forma dinámica mediante AJAX la lista de provincias de un país y la
+lista de los municipios de cada provincia seleccionada.
+1) Definir el código HTML de las dos listas desplegables vacías.
+2) Cuando se cargue la página, cargar la lista de provincias en la primera lista desplegable. El script
+del servidor se llama cargaProvinciasXML.php. El formato de la respuesta es XML, con la
+siguiente estructura:
+<provincias>
+<provincia>
+<codigo>01</codigo>
+<nombre>Álava</nombre>
+</provincia>
+...
+</provincias>
+Para insertar las opciones en la lista desplegable, se pueden utilizar dos técnicas:
+Propiedad innerHTML de la lista y código HTML de cada etiqueta <option>.
+Crear elementos de tipo opción (new Option(nombre, valor)) y añadirlo al array options[] de la lista
+desplegable.
+3) Añadir el evento adecuado a la lista de provincias para que cuando se seleccione una provincia,
+se carguen automáticamente todos sus municipios en la otra lista.
+4) Cuando se seleccione una determinada provincia, se carga mediante AJAX la lista completa de
+municipios en la otra lista desplegable. El script del servidor se llama cargaMunicipiosXML.php. El
+parámetro que se debe enviar al servidor es el código de la provincia y el parámetro se llama
+provincia. El método que espera el servidor es POST. El formato de la respuesta es XML, con la
+siguiente estructura:
+<municipios>
+<municipio>
+<codigo>0014</codigo>
+<nombre>Alegría-Dulantzi</nombre>
+</municipio>
+...
+</municipios> -->
