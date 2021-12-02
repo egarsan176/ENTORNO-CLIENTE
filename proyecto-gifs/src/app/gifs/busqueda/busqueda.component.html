@@ -1,0 +1,11 @@
+<h5>Buscar:</h5>
+<input
+    type="text"
+    class="form-control"
+    placeholder="Buscar gifs..."
+    name="busqueda"
+    [(ngModel)]="busqueda"
+    (keyup.enter)="addBusqueda()"
+>
+    <!-- para poder usar el ngModel hay que importar el formsModule -->
+

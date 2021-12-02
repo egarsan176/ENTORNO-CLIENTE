@@ -1,0 +1,21 @@
+<!-- tenemos una fila en la que se van repitiendo las columnas -->
+
+<div class="row">
+  <div class="col-md-4 col-sm-6 " *ngFor="let gif of mostrarGif">
+
+      <div class="card">
+          <img [src]="gif.images.downsized_medium.url" 
+               [alt]="gif.title"
+               class="card-img-top">
+          <div class="card-body">
+              <p class="card-text">
+                  {{gif.title}}
+              </p>
+              <!-- <div #container>
+                <button class="btn btn-primary" ngxClipboard [cbContent]="gif.images.downsized_medium.url" [container]="container">Copy Url</button>
+              </div> -->
+          </div>
+      </div>
+
+  </div>
+</div>
